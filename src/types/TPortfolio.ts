@@ -1,11 +1,7 @@
-import { EStock } from "./TStock";
+import { EStock, TStock } from "./TStock";
 
 export type TPortfolio = Array<{
+  user_id: string;
   name: string;
-  stocks: Array<{
-    ticker: EStock;
-    date: string;
-    price: number;
-    quantity: number;
-  }>;
+  stocks: Array<TStock>;
 }>;
