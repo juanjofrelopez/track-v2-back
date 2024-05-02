@@ -6,3 +6,5 @@ export type TStock = {
   price: number;
   quantity: number;
 };
+
+export type TStocks = Array<TStock>;

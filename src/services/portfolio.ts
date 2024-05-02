@@ -1,5 +1,6 @@
 import Portfolio from "../models/Portfolio";
 import { TPortfolio } from "../types/TPortfolio";
+import { TStock, TStocks } from "../types/TStock";
 
 export default {
   getPortfoliosByUserId(userId: string) {
@@ -11,7 +12,15 @@ export default {
   },
 
   createPortfolio(newPortfolio: TPortfolio) {
-    // zod validation
+    // @TODO: zod validation
     return Portfolio.create(newPortfolio);
+  },
+
+  updatePortfolio(portfolioId: string, newStocks: TStocks) {
+    // @TODO: zod validation
+    return Portfolio.updateOne(
+      { _id: portfolioId },
+      { $set: { stocks: newStocks } }
+    );
   },
 };

@@ -8,7 +8,7 @@ const attachCurrentUser = async (
   next: NextFunction
 ) => {
   try {
-    const userRecord = await User.findById(req.token._id);
+    const userRecord = await User.findById(req.token._doc._id);
     if (!userRecord) {
       return res.sendStatus(401);
     }
