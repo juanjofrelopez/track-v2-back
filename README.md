@@ -7,8 +7,14 @@
 - [x] get all portfolio for a user, get a specific portfolio
 - [x] test middlewares
 - [x] Update a portfolio
-- [ ] define format for portfolio output table (transaction data and yields)
-- [ ] implement single and total yield calculation service from a portfolio
+- [x] define format for portfolio output table (transaction data and yields)
+- [ ] implement quote retrieval service for stocks and usd rate (current and historical)
 - [ ] integrate meli payment subscription service
 - [ ] implement zod validation
+- [ ] add redis for prices and quotes
 - [ ] Dockerize
+
+## Portfolio output table format
+
+DATE | TICKER | PRICE | QUANTITY | YIELD  
+TOTAL YIELD
