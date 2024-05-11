@@ -13,7 +13,7 @@ const PricesSchema = new mongoose.Schema(
   {
     stocks: [StockPriceSchema],
   },
-  { timestamps: true }
+  { timestamps: true, _id: false }
 );
 
 export default mongoose.model<TStockPrices & mongoose.Document>(

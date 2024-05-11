@@ -13,4 +13,4 @@ services:
   redis-server:
     image: redis:alpine
     ports:
-      - "6379:6379" # Map Redis port to host
+      - "6379:6379"
