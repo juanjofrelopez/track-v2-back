@@ -27,3 +27,11 @@ TOTAL YIELD
 - users
 - dollarQuotes
 - prices
+
+
+## Useful commands because i keep forgetting them xd
+```bash
+sudo docker build -t node-app .
+sudo docker run node-app
+sudo docker compose up
+```
