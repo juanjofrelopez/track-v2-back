@@ -3,10 +3,10 @@ import quotes from "../services/quotes";
 import { EStock } from "../types/TStock";
 
 export default {
-  getTickerPrice(req: Request, res: Response) {
+  async getTickerPrice(req: Request, res: Response) {
     try {
       const { ticker } = req.params;
-      const tickerPrice = quotes.getTickerPrice(ticker as EStock);
+      const tickerPrice = await quotes.getTickerPrice(ticker as EStock);
       return res.status(200).json(tickerPrice);
     } catch (e) {
       if (e instanceof Error) {

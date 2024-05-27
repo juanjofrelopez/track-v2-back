@@ -11,7 +11,12 @@ export default {
     return Portfolio.findById(portolioId);
   },
 
-  createPortfolio(newPortfolio: TPortfolio) {
+  createPortfolio(name: string, user_id: string) {
+    const newPortfolio: TPortfolio = {
+      user_id,
+      name,
+      stocks: [],
+    };
     // @TODO: zod validation
     return Portfolio.create(newPortfolio);
   },
@@ -21,6 +26,13 @@ export default {
     return Portfolio.updateOne(
       { _id: portfolioId },
       { $set: { stocks: newStocks } }
+    );
+  },
+
+  addStockToPortfolio(portfolioId: string, newStock: TStock) {
+    return Portfolio.updateOne(
+      { _id: portfolioId },
+      { $push: { stocks: newStock } }
     );
   },
 };

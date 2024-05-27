@@ -10,6 +10,6 @@ export default async (app: Express) => {
   await expressLoader(app);
   console.log("🥵 Express loaded");
 
-  redis.initRedis();
-  console.log("🥵 Redis loaded");
+  // redis.initRedis();
+  // console.log("🥵 Redis loaded");
 };

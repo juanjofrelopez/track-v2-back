@@ -8,7 +8,12 @@ const route = Router();
 export default (app: Router) => {
   app.use("/portfolio", route);
 
-  route.post("/create", controllers.portfolio.createPortfolio);
+  route.post(
+    "/create",
+    isAuth,
+    attachCurrentUser,
+    controllers.portfolio.createPortfolio
+  );
 
   route.get(
     "",
@@ -29,5 +34,12 @@ export default (app: Router) => {
     isAuth,
     attachCurrentUser,
     controllers.portfolio.updatePortfolio
+  );
+
+  route.post(
+    "/:portfolioId",
+    isAuth,
+    attachCurrentUser,
+    controllers.portfolio.addStockToPortfolio
   );
 };

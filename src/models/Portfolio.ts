@@ -15,7 +15,7 @@ const PortfolioSchema = new mongoose.Schema(
   {
     user_id: String,
     name: String,
-    stocks: [StocksSchema],
+    stocks: { type: [StocksSchema], default: [] },
   },
   { timestamps: true }
 );

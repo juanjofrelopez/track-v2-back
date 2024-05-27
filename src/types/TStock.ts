@@ -1,4 +1,4 @@
-export type EStock = "AAPL.BA" | "SPY.BA";
+export type EStock = string;
 
 export type TStock = {
   ticker: EStock;
