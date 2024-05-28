@@ -5,13 +5,10 @@ import { TStockPrices } from "../types/TStockPrices";
 
 export default {
   async getTickerPrice(ticker: EStock) {
-    // const prices: TStockPrices = (await Prices.find(
-    //   {}
-    // )) as unknown as TStockPrices;
-    // const foundTicker = prices.stocks.find((p) => p.ticker === ticker);
-    // if (!foundTicker) throw new Error("couldn't find ticker price");
-    // return foundTicker;
-    return { ticker, price: 50000 };
+    const prices = await Prices.find({}).lean();
+    const foundTicker = prices[0].stocks.find((p) => p.ticker === ticker);
+    if (!foundTicker) throw new Error("couldn't find ticker price");
+    return foundTicker;
   },
 
   getDollarQuote(date: string | undefined) {

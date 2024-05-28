@@ -11,12 +11,15 @@
 - [x] implement quote retrieval service for stocks and usd rate (current and historical)
   - The frontend will do all the calculations from these quotes.
 - [x] Dockerize
-- [ ] rollback del nombre de las colecciones de precios de stock y dolares
-- [ ] arreglar el tema de las colecciones de la base de datos los nombres y las lambda.
+- [x] rollback del nombre de las colecciones de precios de stock y dolares
+- [x] arreglar el tema de las colecciones de la base de datos los nombres y las lambda.
+- [ ] integrate real quote pricing
+- [ ] Cant create user if email exits
+- [ ] implement zod validation
+
+
 - [ ] add redis for ticker prices and quotes
 - [ ] integrate meli payment subscription service
-- [ ] implement zod validation
-- [ ] Cant create user if email exits
 
 ## UI TODO
 
