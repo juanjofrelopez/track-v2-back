@@ -13,16 +13,17 @@
 - [x] Dockerize
 - [x] rollback del nombre de las colecciones de precios de stock y dolares
 - [x] arreglar el tema de las colecciones de la base de datos los nombres y las lambda.
-- [ ] integrate real quote pricing
+- [x] integrate real quote pricing
+- [ ] implement trading history concept
 - [ ] Cant create user if email exits
 - [ ] implement zod validation
-
 
 - [ ] add redis for ticker prices and quotes
 - [ ] integrate meli payment subscription service
 
 ## UI TODO
 
+- [x] add tabs for panel and trade history
 - [ ] export portfolio as csv. in the same row as the portfolio title
 - [ ] on hover on each row, three dots. "edit" and "delete"
 
@@ -96,3 +97,7 @@ que sea simplemente una portfolio yield general sin tener en cuenta el precio de
 
 prices -> ultimos precios de las stocks en dolares
 quotes -> precios del dolar (sin usar por ahora)
+
+v0.2:
+
+implementar trade history
