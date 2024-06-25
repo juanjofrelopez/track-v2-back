@@ -19,7 +19,7 @@
 - [ ] implement zod validation
 
 - [ ] add redis for ticker prices and quotes
-- [ ] integrate meli payment subscription service
+- [ ] integrate MercadoPago payment subscription service
 
 ## UI TODO
 
@@ -42,12 +42,9 @@ sum all profits = pt\*qty
 
 TOTAL YIELD = (sum all profits / sum all costs) - 1
 
-lo que tengo que dar en el back:
-el portfolio
-luego el front me hace las request de cada precio de cada stock
-that's it
+the backend serves the portfolio and the frontend makes the request for each stock price.
 
-# Useful commands because i keep forgetting them xd
+# Useful commands
 
 ```bash
 sudo docker build -t node-app .
@@ -90,14 +87,15 @@ sudo docker compose up
   price : Number
   }]
 
-## reorganizacion
+## reorganization
 
 v0.1:
-que sea simplemente una portfolio yield general sin tener en cuenta el precio del dolar o lo que sea
 
-prices -> ultimos precios de las stocks en dolares
-quotes -> precios del dolar (sin usar por ahora)
+total yield withouth acccounting for the ars-usd rate
+
+prices -> last stock prices in usd
+quotes -> ars-usd rates (unusable for now)
 
 v0.2:
 
-implementar trade history
+- [ ] implement trade history
